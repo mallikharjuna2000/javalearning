@@ -1,0 +1,65 @@
+1.(a) // Formula to convert Celsius to Fahrenheit
+ // celsius * 9 / 5 + 32 involves implicit type casting from int to double
+ 
+1.(b)  // Formula to convert Fahrenheit to Celsius
+       (fahrenheit - 32) * 5 / 9)     
+      
+2. A school management system calculates a student’s average score across three tests. The scores are stored as integers, but the average is computed as a decimal (floating-point value). For display purposes, the average is also shown as a whole number by rounding down. 
+
+3.Example-3
+—--------------
+2.A grocery store application calculates the total bill by multiplying the price of an item (which is a double) with the quantity purchased (which is an int). After calculating the total, the application rounds the result to the nearest lower whole number for display.
+
+4. 
+Write a Java program to input the radius of a circle and calculate its area using the formula:
+Area = π × r²
+Display the result as a floating-point number with two decimal places.
+
+Q5)
+ Write a Java program to calculate Simple Interest and Total Amount.
+ Input values should include:
+Principal (double)
+
+Rate of Interest in % (double)
+
+Time in years (double)
+ Use the formula:
+ Simple Interest = (P × R × T) / 100
+ Display the interest and total amount.
+System.out.printf("Area of the circle = %.2f\n", area);
+
+Q6) Q3:
+ Write a Java program to calculate Compound Interest and Total Amount.
+ Input values should include:
+Principal (double)
+
+Rate of Interest in % (double)
+Time in years (double)
+ Use the formula:
+ Amount = P × (1 + R/100)ᵀ
+ Compound Interest = Amount − Principal
+ Display the compound interest and total amount rounded to two decimal places.
+
+Q8:
+ Write a Java program to calculate Simple Interest and Compound Interest where the time is entered in months.
+Input:
+Principal amount (double)
+Annual rate of interest in percentage (double)
+Time in months (int)
+Requirements:
+Convert time in months to years.
+Calculate:
+Simple Interest using the formula:
+ SI = (Principal × Rate × Time) / 100
+Compound Interest using the formula:
+ CI = Principal × (1 + Rate/100)^Time − Principal
+
+Print both interests and their corresponding total amounts.
+Output:
+Time in years (converted from months)
+
+
+Simple Interest and Total with Simple Interest
+
+
+Compound Interest and Total with Compound Interest
