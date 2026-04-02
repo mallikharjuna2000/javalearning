@@ -2,7 +2,7 @@ package com.codegnan;
 
 import java.util.Scanner;
 
-public class ReverseNumber {
+public class PalindromeNumber {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
@@ -19,8 +19,13 @@ public class ReverseNumber {
 			reverseNumber = reverseNumber * 10 + lastDigit;//3*10+2-->32-->32*10+1-->321
 			number /= 10;//1/10-->0
 		}
-		System.out.println("Reverse of a Number " + originalNumber + " is = " + reverseNumber);
+		if(originalNumber==reverseNumber) {
+			System.out.println(originalNumber+ "  is Palindome Number");
+		}else {
+			System.out.println(originalNumber+ " is not Palindome Number");
+		}
 	scanner.close();
 	}
 
 }
+
