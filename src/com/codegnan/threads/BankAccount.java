@@ -7,7 +7,7 @@ public class BankAccount {
 		this.balance = balance;
 	}
 
-	public synchronized void withdraw(String user, double amount) {
+	public  synchronized void withdraw(String user, double amount) {
 		System.out.println(user + " Trying to withdraw " + amount);
 		if (balance >= amount) {
 			System.out.println(user + " processing the withdrawl..amount.");

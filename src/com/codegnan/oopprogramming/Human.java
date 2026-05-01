@@ -19,7 +19,7 @@ public class Human implements Workable, Eatable, Sleepable {
 	public void work() {
 		if (isAwake && energyLevel > 20) {
 			isWorking = true;
-			energyLevel = -20;
+			energyLevel -=20;
 			System.out.println(name + " is working. Energy Level : " + energyLevel);
 		} else {
 			System.out.println(name + " is too tired to work!");
@@ -40,7 +40,7 @@ public class Human implements Workable, Eatable, Sleepable {
 	@Override
 	public void eat() {
 		energyLevel += 30;
-		if (energyLevel > 100) {
+		if (energyLevel >= 100) {
 			energyLevel = 100;
 			System.out.println(name + " is eating. Energy Level : " + energyLevel);
 		}

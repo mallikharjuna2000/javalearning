@@ -16,7 +16,7 @@ public class Robot implements Workable {
 	public void work() {
 		if (batteryLevel > 10) {
 			isWorking = true;
-			batteryLevel = -15;
+			batteryLevel  -=15;
 			System.out.println("Robot : " + model + " is working. Battery " + batteryLevel + "%");
 		} else {
 			System.out.println("Robot : " + model + " needs charging");

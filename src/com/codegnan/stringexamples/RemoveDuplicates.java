@@ -4,7 +4,7 @@ public class RemoveDuplicates {
 
 	public static void main(String[] args) {
 		   // Input string
-	       String str = "programming";
+	       String str = "programming world";
 	       // This will store the final result (without duplicates)
 	       String result = "";
 	       // Step 1: Traverse each character of the original string
