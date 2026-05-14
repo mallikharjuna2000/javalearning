@@ -1,0 +1,59 @@
+package com.codegnan.web;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class CourseServlet
+ */
+@WebServlet("/courses")
+public class CourseServlet extends HttpServlet {
+	 private static final String[][] COURSES = {
+		        {"Advanced Java",  "45 Days", "JDBC, Servlets, JSP, Hibernate, Spring Boot"},
+		        {"Core Java",      "30 Days", "OOP, Collections, Streams, Exception Handling"},
+		        {"Spring Boot",    "20 Days", "REST APIs, Spring Data JPA, Spring Security"},
+		        {"Full Stack Java","60 Days", "Angular + Spring Boot + MySQL"},
+		    };
+
+
+		    @Override
+		    protected void doGet(HttpServletRequest request,
+		                         HttpServletResponse response)
+		            throws ServletException, IOException {
+
+
+		        response.setContentType("text/html;charset=UTF-8");
+		        PrintWriter out = response.getWriter();
+
+
+		        out.println("<!DOCTYPE html><html><head>");
+		        out.println("<title>Codegnan Courses</title>");
+		        out.println("<style>table{border-collapse:collapse;width:80%}"
+		                  + "th,td{border:1px solid #333;padding:8px}"
+		                  + "th{background:#1F3864;color:white}</style>");
+		        out.println("</head><body>");
+		        out.println("<h2>Codegnan Course Catalogue</h2>");
+		        out.println("<table>");
+		        out.println("<tr><th>Course</th><th>Duration</th><th>Topics Covered</th></tr>");
+
+
+		        for (String[] course : COURSES) {
+		            out.println("<tr>");
+		            out.println("<td>" + course[0] + "</td>");
+		            out.println("<td>" + course[1] + "</td>");
+		            out.println("<td>" + course[2] + "</td>");
+		            out.println("</tr>");
+		        }
+
+
+		        out.println("</table></body></html>");
+		    }
+
+
+}
